@@ -1,0 +1,91 @@
+@import 'bourbon/_bourbon.scss'
+
+$font: Nunito, sans-serif
+
+*
+	margin: 0
+	padding: 0
+
+body
+	background-color: #323232
+
+.wrapper
+	width: 100%
+	margin: 0 auto
+
+	header
+		background-color: steelblue
+		color: white
+		text-align: center
+		padding: 20px
+		font-family: $font
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		line-height: 1.3
+		+transition()
+
+		h1, #color-RGB
+			font-weight: 100
+
+		#color-RGB
+			+display(block)
+			font-size: 2.1em
+
+	nav
+		background-color: white
+		height: 30px
+
+		.nav-wrapper
+			max-width: 550px
+			margin: 0 auto
+			text-align: center
+			height: 100%
+
+			.mode
+				float: right
+
+			button, span
+				+display(inline-block)
+				font-family: $font
+				line-height: 30px
+
+			button
+				outline: none
+				border: none
+				background-color: white
+				color: steelblue
+				text-transform: uppercase
+				padding: 0px 5px
+				cursor: pointer
+				letter-spacing: 0.1em
+				+transition()
+				font:
+					weight: 600
+					size: 16px
+
+				&:hover, &.selected
+					background-color: steelblue
+					color: white
+
+				&#reset-btn
+					float: left
+
+
+	.square-container
+		max-width: 600px
+		margin: 20px auto
+		+display(flex)
+		+align-items(center)
+		+justify-content(space-between)
+		+flex-wrap(wrap)
+
+		.square
+			background-color: green
+			width: 30%
+			padding-top: 30%
+			border-radius: 15%
+			+transition(400ms)
+
+			@for $i from 4 through 6
+				&:nth-child(#{$i})
+					margin-top: 20px

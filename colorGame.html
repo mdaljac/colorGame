@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Game</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="colorGame.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="colorGame.js"></script>
+</head>
+<body>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Dobrodošli u RGB igru</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Cilj ove igre je vježbanje RGB kodova određenih boja. Prilikom pokretanja igre, generira se 6 boja i RGB kod pobjedničke boje. Korisnik na temelju RGB koda treba pogoditi o kojoj se boji radi. Igra ima dva moda: easy i hard. Kod easy moda generiraju se 3 boje.</p>
+
+	        <p><strong>Uživajte!</strong></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="wrapper">
+		<header>
+			<h1>the great <span id="color-RGB"></span> guessing game</h1>
+		</header>
+		
+		<nav>
+			<div class="nav-wrapper">
+				<button id="reset-btn">New Colors</button>
+				<span class="click-result"></span>
+				
+				<div class="mode">
+					<button class="game-mode" data-num="3">Easy</button>
+					<button class="game-mode selected" data-num="6">Hard</button>
+				</div>
+			</div>
+		</nav>
+
+		<div class="square-container">
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+		</div>
+	</div>
+</body>
+</html>
